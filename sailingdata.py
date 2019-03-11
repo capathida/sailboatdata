@@ -2,25 +2,23 @@ filename = "data/sailboat.data"
 
 def wind_data(line):
     total_speed = 0
-    for speed in line:
-        total_speed += speed 
+    iterspeed = iter(line)
+    next(iterspeed)
+    for speed in iterspeed:
+        total_speed = total_speed + float(speed)
     print(line, total_speed)
 
 def wind_velocity(line):
-    print("Velocity")
-    print(line)
+    print("Velocity", line)
 
 def run(line):
-    print("run")
-    print(line)
+    print("run", line)
 
 def gybe(line):
-    print("gybe")
-    print(line)
+    print("gybe", line)
 
 def beat(line):
-    print("Beat Angle")
-    print(line)
+    print("Beat Angle", line)
 
 def not_found(splitted_line):
     print("Not Found", splitted_line[0])
